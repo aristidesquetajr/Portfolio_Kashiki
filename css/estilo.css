@@ -1,124 +1,95 @@
-@charset "utf8";
-
-:root{
-    --bgCont: rgb(2, 64, 100);
-    --headWidth: 220px;
-}
-
-::-webkit-scrollbar {
-    background-color: var(--bgCont);
-}
-
-::-webkit-scrollbar-thumb{
-    background-color: rgba(0, 0, 0, .50);
-}
-
 * {
-    padding: 0;
-}
-
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  /* border: $borda; */
 }
 
 ul {
-    list-style: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-a{
-    color: #fff;
-    text-decoration: none;
+p {
+  text-align: justify;
 }
 
-a:hover{
-    color: rgba(97, 96, 96, 0.534);
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #141414;
+  min-height: 100vh;
+  color: #fff;
+  font-size: 14pt;
 }
 
-header{
-    width: var(--headWidth);
-    height: 110%;
-    background-color: var(--bgCont);
-    position: fixed;
-    text-align: center;
-    margin: -10px;
+header {
+  width: 100%;
+  position: fixed;
+  background: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  z-index: 2;
+  padding-right: 40px;
+  height: 50px;
+  top: 0;
+  font-weight: bold;
+}
+header ul {
+  display: flex;
+  flex-direction: row;
+}
+header ul li {
+  margin: 0 4px;
+  line-height: 46px;
+}
+header ul li a {
+  font-size: 1.5em;
+  letter-spacing: 2.5px;
+  text-decoration: none;
+  display: block;
+  color: #fff;
+}
+header ul li:hover a {
+  color: #ffffffd5;
+}
+header details {
+  width: 40px;
+  transition: all 0.2s;
+}
+header details img {
+  width: 100%;
+  height: 90%;
+}
+header details img:hover {
+  transform: scale(1.2);
+}
+header details ul {
+  display: flex;
+  flex-direction: column;
 }
 
-@media screen and (max-width: 960px){
-    /* header{
-        display: none;
-    } */
+header.screen {
+  background-color: #2E2E32;
 }
 
-header img{
-    border: 5px solid rgba(185, 176, 176, 0.877);
-    border-radius: 100px;
+section {
+  width: 85%;
+  position: relative;
+  top: 50px;
+  margin: 0 auto 3.2em auto;
+}
+section div {
+  min-height: 93vh;
 }
 
-
-header ul li a{
-    display: block;
-    font-weight: bolder;
-    text-transform: uppercase;
-    font-size: 16pt;
-    padding: 15px;
-    margin-top: 10px;
+footer {
+  width: 100%;
+  background-color: #393A3E;
+  min-height: 50px;
+  line-height: 50px;
+  text-align: center;
 }
 
-header li a:hover{
-    background-color: rgba(0, 0, 0, 0.589);
-}
-
-section{
-    width: calc(100% - var(--headWidth) - 9px);
-    background: #fff;
-    min-height: 100vh;
-    margin: -10px;
-    margin-left: calc(var(--headWidth) - 10px);
-    padding: 10px;
-}
-
-#corpo{
-    width: 760px;
-    margin: auto;
-}
-
-#home, #about, #contact{
-    min-height: 100vh;
-    
-}
-
-section h2{
-    position: relative;
-    margin-bottom: 50px;
-}
-
-section h2::after{
-    position: absolute;
-    content: "";
-    background-color: rgb(44, 43, 43);
-    width: 40%;
-    height: 2px;
-    bottom: -20px;
-    left: 0;
-}
-
-#contact li{
-    margin-bottom: 15px;
-}
-
-#contact li input{
-    width: 70%;
-}
-
-#contact input{
-    padding: 15px;
-}
-
-#contact input[type^=submit]{
-    width: 100px !important;
-    background-color: rgb(0, 98, 128);
-    color: #fff;
-    font-weight: bold;
-    border-radius: 20px;
-}
+/*# sourceMappingURL=estilo.css.map */

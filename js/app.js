@@ -12,3 +12,19 @@ link.forEach(item => {
         })
     })
 })
+
+this.addEventListener('scroll', () => {
+    if(window.pageYOffset == 0)
+        document.querySelector('header').classList.remove('screen')
+    else
+        document.querySelector('header').classList.add('screen')
+})
+
+this.addEventListener('load', () => {
+    let ano
+    if((new Date().getFullYear()) == 2020)
+        ano = 2020
+    else
+        ano = `2020 - ${(new Date().getFullYear())}`
+    document.querySelector('footer>span').textContent = ano
+})
